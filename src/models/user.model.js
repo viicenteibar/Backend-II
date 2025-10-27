@@ -1,4 +1,3 @@
-// src/models/user.model.js
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
@@ -14,7 +13,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true, // El email debe ser único
+        unique: true,
         index: true
     },
     age: {
@@ -27,7 +26,7 @@ const userSchema = new mongoose.Schema({
     },
     cart: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Carts' // Asumo que tu modelo de carritos se llama 'Carts'
+        ref: 'Carts' 
     },
     role: {
         type: String,
